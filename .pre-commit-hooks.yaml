@@ -1,0 +1,5 @@
+- id: update-tf-docs
+  name: update tf-docs generation
+  description: Update Pre-Commit config to generate TF Docs for all modules in repository.
+  entry: update-tf-docs
+  language: python
