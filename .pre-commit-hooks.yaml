@@ -4,7 +4,7 @@
   entry: copy-root-outputs
   language: python
   pass_filenames: false
-  files: .*\.tf
+  files: ^.*\.tf$
 - id: update-tf-docs
   name: update tf-docs generation
   description: Update Pre-Commit config to generate TF Docs for all modules in repository.
