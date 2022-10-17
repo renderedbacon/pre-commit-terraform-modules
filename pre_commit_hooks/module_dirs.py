@@ -15,7 +15,7 @@ def list_module_paths(root: Path) -> list[Path]:
         if "versions.tf" in files:
             modules_paths.append(base_path)
 
-    return modules_paths
+    return sorted(modules_paths, key=lambda p: str(p))
 
 
 def main():
