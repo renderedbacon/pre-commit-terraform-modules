@@ -2,8 +2,9 @@
 from argparse import ArgumentParser
 from pathlib import Path
 
-from module_dirs import list_module_paths
 from ruamel.yaml import YAML
+
+from .module_dirs import list_module_paths
 
 
 def is_valid_module(module_path: Path) -> bool:

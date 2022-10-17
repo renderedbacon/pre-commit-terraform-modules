@@ -1,5 +1,14 @@
+- id: copy-root-outputs
+  name: copy root outputs
+  description: Update all modules with outputs.tf from root module.
+  entry: copy-root-outputs
+  language: python
+  pass_filenames: false
+  files: .*\.tf
 - id: update-tf-docs
   name: update tf-docs generation
   description: Update Pre-Commit config to generate TF Docs for all modules in repository.
   entry: update-tf-docs
   language: python
+  pass_filenames: false
+  files: ^(.pre-commit-config.yaml|.*\.tf)$

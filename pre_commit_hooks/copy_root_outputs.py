@@ -2,7 +2,7 @@
 from argparse import ArgumentParser
 from pathlib import Path
 
-from module_dirs import list_module_paths
+from .module_dirs import list_module_paths
 
 
 def main():
