@@ -18,7 +18,7 @@ def main():
     parser.add_argument(
         "--modules",
         type=str,
-        default="examples",
+        default=".",
         help="Modules root to start searching from",
     )
     parser.add_argument(
@@ -53,6 +53,10 @@ def main():
 
     # iterate through modules
     for module_path in module_paths:
+        # always skip root
+        if module_path == modules_root:
+            continue
+
         print(str(module_path))
 
         # write updated outputs.tf
