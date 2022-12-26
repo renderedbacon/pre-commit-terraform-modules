@@ -45,8 +45,6 @@ def update_root_readme(root: Path, readme: str, module_toc_md: str, start_marker
     # update readme contents
     readme_contents = readme_contents[:start_index] + module_toc_md_with_markers + readme_contents[end_index:]
 
-    print(readme_contents)
-
     # write updated readme
     with open(readme_path, "w") as readme_file:
         readme_file.write(readme_contents)
