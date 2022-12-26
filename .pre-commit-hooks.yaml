@@ -5,6 +5,15 @@
   language: python
   pass_filenames: false
   files: ^.*\.tf$
+
+- id: update-readme-toc-modules
+  name: update readme toc modules
+  description: Update README.md with TOC of for all modules and stacks in repository.
+  entry: update-readme-toc-modules
+  language: python
+  pass_filenames: false
+  files: ^(README.md|.*\.tf)$
+
 - id: update-tf-docs
   name: update tf-docs generation
   description: Update Pre-Commit config to generate TF Docs for all modules in repository.

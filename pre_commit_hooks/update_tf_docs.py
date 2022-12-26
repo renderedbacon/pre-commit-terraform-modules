@@ -4,21 +4,8 @@ from pathlib import Path
 
 from ruamel.yaml import YAML
 
+from .module_dirs import is_valid_module
 from .module_dirs import list_module_paths
-
-
-def is_valid_module(module_path: Path) -> bool:
-    # check for minimal files
-    module_files = [
-        "README.md",
-        "main.tf",
-        "outputs.tf",
-        "versions.tf",
-    ]
-
-    file_check = all((module_path / file).exists() for file in module_files)
-
-    return file_check
 
 
 def generate_hooks_from_modules(module_paths: list[Path]):
